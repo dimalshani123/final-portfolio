@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS System Sitemap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">POS System</h1>
+    <ul class="list-group">
+        <li class="list-group-item"><a href="#manageCustomer">Manage Customers</a></li>
+        <li class="list-group-item"><a href="#manageStore">Manage Store</a></li>
+        <li class="list-group-item"><a href="#placeOrder">Place Orders</a></li>
+    </ul>
+</div>
+
+<div class="container mt-5">
+    <h1 id="manageCustomer" class="text-center mb-4">Manage Customers</h1>
+
+    <!-- Customer Form -->
+    <form class="mb-4">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="customerName1" class="form-label">Customer ID</label>
+                <input type="text" class="form-control" id="customerName1" placeholder="Enter Customer ID">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="customerName" class="form-label">Customer Name</label>
+                <input type="email" class="form-control" id="customerName" placeholder="Enter Customer Name">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="customerNumber" class="form-label">Customer Number</label>
+                <input type="email" class="form-control" id="customerNumber" placeholder="Enter Customer Number">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="customerAddress" class="form-label">Customer Address</label>
+                <input type="email" class="form-control" id="customerAddress" placeholder="Enter Customer Address">
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="button" class="btn btn-danger">Unregister</button>
+            <button type="button" class="btn btn-info">Find</button>
+            <button type="button" class="btn btn-warning">Update</button>
+            <button type="button" class="btn btn-success">Get All Customers</button>
+        </div>
+    </form>
+
+    <!-- Customers Table -->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>C001</td>
+            <td>Anjana Dahanayaka</td>
+            <td>765823106</td>
+            <td>Matara</td>
+            <td>
+                <button class="btn btn-sm btn-primary">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="container mt-5">
+    <h1 id="manageStore" class="text-center mb-4">Manage Store</h1>
+
+    <!-- Store Form -->
+    <form class="mb-4">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="itemID" class="form-label">Item ID</label>
+                <input type="text" class="form-control" id="itemID" placeholder="Enter Item ID">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="itemName" class="form-label">Item Name</label>
+                <input type="number" class="form-control" id="itemName" placeholder="Enter Item Name">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="itemPrice" class="form-label">Item Price</label>
+                <input type="number" class="form-control" id="itemPrice" placeholder="Enter Item Price">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="itemQty" class="form-label">Item Qty</label>
+                <input type="number" class="form-control" id="itemQty" placeholder="Enter Item Qty">
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Add Item</button>
+            <button type="button" class="btn btn-danger">Remove Item</button>
+            <button type="button" class="btn btn-info">Search Items</button>
+            <button type="button" class="btn btn-warning">Update Item</button>
+            <button type="button" class="btn btn-success">Get All Items</button>
+        </div>
+    </form>
+
+    <!-- Items Table -->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Item ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>I001</td>
+            <td>Biscuits</td>
+            <td>Rs.360.00</td>
+            <td>100</td>
+            <td>
+                <button class="btn btn-sm btn-primary">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container mt-5">
+    <h1 id="placeOrder" class="text-center mb-4">Place Orders</h1>
+
+    <!-- Order Form -->
+    <form class="mb-4">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="orderId" class="form-label">Order ID</label>
+                <input type="text" class="form-control" id="orderId" placeholder="Enter Order ID">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="customerID2" class="form-label">Customer ID</label>
+                <input type="text" class="form-control" id="customerID2" placeholder="Enter Customer ID">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="itemID2" class="form-label">Item ID</label>
+                <input type="text" class="form-control" id="itemID2" placeholder="Enter Item ID">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="itemPrice2" class="form-label">Item Price</label>
+                <input type="text" class="form-control" id="itemPrice2" placeholder="Enter Item Price">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="itemQty2" class="form-label">Item Qty</label>
+                <input type="text" class="form-control" id="itemQty2" placeholder="Enter Item Qty">
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Save Order</button>
+            <button type="button" class="btn btn-info">Search Orders</button>
+            <button type="button" class="btn btn-warning">Update Order</button>
+            <button type="button" class="btn btn-danger">Delete Order</button>
+            <button type="button" class="btn btn-success">Get All Orders</button>
+        </div>
+    </form>
+
+    <!-- Orders Table -->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer ID</th>
+            <th>Item ID</th>
+            <th>Item Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>P001</td>
+            <td>C001 </td>
+            <td>I001</td>
+            <td>360.00</td>
+            <td>100</td>
+            <td>
+                <button class="btn btn-sm btn-primary">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
